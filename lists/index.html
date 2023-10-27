@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lists</title>
+</head>
+
+<body>
+    <!--Unordered lists are created using the <ul> element, and each item within the list is created using the list item element <li>.-->
+    <ul>
+        <!--Each list item in an unordered list begins with a bullet point.
+        This is called the "list item marker", and it can be changed through CSS.-->
+        <li>Unordered Item 1</li>
+        <li>Unordered Item 2</li>
+        <li>Unordered Item 3</li>
+    </ul>
+    <!--Ordered lists are created using the <ol> element. Each individual item in them is again created using the
+        list item element <li>. However, each list item in an ordered list begins with a number instead.-->
+    <ol>
+        <li>Unordered Item 1</li>
+        <li>Unordered Item 2</li>
+        <li>Unordered Item 3</li>
+    </ol>
+
+    <!--The start attribute defines the number from which an ordered list should start. By default, ordered lists start at 1-->
+    <ol start="0">
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ol>
+
+    <!--The reversed attribute, when used on the <ol> element, allows a list to appear in reverse order.
+        An ordered list of five items numbered 1 to 5 may be reversed and ordered from 5 to 1.-->
+    <ol reversed="true">
+        <li>3rd Place</li>
+        <li>2nd Place</li>
+        <li>1st Place</li>
+    </ol>
+
+    <!--The value attribute may be used on an individual <li> element within an ordered list to change its value within the list.
+        The number of any list item appearing below a list item with a value attribute will be recalculated accordingly.-->
+    <ol>
+        <li>First Item</li>
+        <span>...</span>
+        <li value="6">Sixth Item</li>
+        <li>Seventh Item</li>
+    </ol>
+
+    <!--Description lists are used to outline multiple terms and their descriptions, as in a glossary, for example.-->
+    <!--Creating a description list in HTML is accomplished using the description list block-level element, <dl>.
+        Instead of using a <li> element to mark up list items, the description list requires two block-level elements:
+        the description term element, <dt>, and the description element, <dd>.-->
+    <!--A description list can contain multiple descriptions per term, or multiple terms with the same description.-->
+    <dl>
+        <dt>study</dt>
+        <dd>The devotion of time and attention to acquiring knowledge on an academic subject, especially by means of
+            books</dd>
+        <dt>design</dt>
+        <dd>A plan or drawing produced to show the look and function or workings of a building, garment, or other object
+            before it is built or made</dd>
+        <dd>Purpose, planning, or intention that exists or is thought to exist behind an action, fact, or material
+            object</dd>
+        <dt>business</dt>
+        <dt>work</dt>
+        <dd>A person's regular occupation, profession, or trade</dd>
+    </dl>
+
+    <!--Nesting lists: Every list may be placed within another list; they can be nested continually.-->
+    <!--Unordered lists cam be nested inside ordered lists, and vice-versa.
+        Lists of the same type can also be nested inside eachother.-->
+    <ol>
+        <li>First</li>
+        <li>Second
+            <ul>
+                <li>Onika Burgers</li>
+                <li>Deeznuts</li>
+            </ul>
+        </li>
+        <li>Third</li>
+    </ol>
+    <ul>
+        <li>First</li>
+        <li>Second
+            <ol>
+                <li>Onika Burgers</li>
+                <li>Deeznuts</li>
+            </ol>
+        </li>
+        <li>Third</li>
+    </ul>
+    <ul>
+        <li>First</li>
+        <li>Second
+            <ul>
+                <li>Onika Burgers</li>
+                <li>Deeznuts</li>
+            </ul>
+        </li>
+        <li>Third</li>
+    </ul>
+    <ol>
+        <li>First</li>
+        <li>Second
+            <ol>
+                <li>Onika Burgers</li>
+                <li>Deeznuts</li>
+            </ol>
+        </li>
+        <li>Third</li>
+    </ol>
+</body>
+
+</html>

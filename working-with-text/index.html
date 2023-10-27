@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Working with Text</title>
+</head>
+
+<body>
+    <!--Headings are block-level elements (they start on a new line and take up all of the width of their containing block).-->
+    <!--A document should not contain multiple h1 headings.-->
+    <!--You shouldn't skip levels when adding headings to your page.-->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!--Paragraphs (<p>) are also block-level elements.-->
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <!--<strong> is used to semantically mark text as important (which is important for tools like screen readers).
+        Strong elements will be rendered in bold.
+        <strong> is an inline element (they do not start on a new line and only take as up as much space in their
+        containing block as their content requires).-->
+    <p>This is <strong>important</strong> stuff.</p>
+
+    <!--<b> defines bold text, without marking it as semantically important.
+        <b> is an inline element.-->
+    <p>This is <b>bold</b> stuff, but it's not semantically important.</p>
+
+    <!--<em> semantically places emphasis on its content. Em (which stands for EMphasis) is rendered as italic.
+        <em> is an inline element.-->
+    <p>This is <em>emphasized</em> stuff.</p>
+
+    <!--<i> defines a part of text in an alternate voice or mood. The content inside is typically rendered in italic.
+        <i> is an inline element.-->
+    <p>This is <i>a thought in an alternate mood</i> than the rest of the content.</p>
+
+    <p>This text is <small>small</small>.</p>
+    <p>This text is <mark>highlighted</mark>.</p>
+    <p>This text is <del>deleted</del>.</p>
+    <p>This text is <ins>inserted</ins>.</p>
+    <p>You can use the previous two together to make a <del>deeznuts</del> <ins>diff</ins>.</p>
+    <p>This is <sub>subscript</sub> text. This is <sup>superscript</sup> text. You can do math with them: x<sub>1</sub><sup>2</sup> = x<sub>2</sub><sup>3</sup>.</p>
+
+    <!--Nesting terminology-->
+    <p> <!--Parent element-->
+        <p></p> <!--Child element-->
+
+        <!--Sibiling element, because:
+                - They/re children of the same parent element.
+                - They're on the same level of nesting.-->
+        <p></p>
+        <p></p>
+    </p>
+</body>
+
+</html>
