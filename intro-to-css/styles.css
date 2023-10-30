@@ -1,0 +1,126 @@
+/* CSS is made up of various rules. A rule is made up of:
+    - a selector
+    - a semicolon-separate list of declarations, where each declaration is made up of a property:value pair. */
+
+/* Selectors simply refer to the HTML elements to which CSS rules apply; they’re what is actually being “selected” for each rule.  */
+
+/* Universal selector (*)
+    - Matches elements of any type.
+    - The syntax is an asterisk: * . */
+* {
+    /* Sets the color of an element's text. */
+    color: purple;
+}
+
+/* Type selectors
+    - Match all elements of the given element type.
+    - The syntax is the name of the element: p, h1, div etc. */
+div {
+    color: blue;
+}
+
+/* Class selectors
+    - Match all elements with a given class.
+    - The syntax is a period immediately followed by the case-sensitive value of the class attribute: .class-name
+    - Class is a global attribute that you can place on any HTML element.
+    - Classes aren’t required to be specific to a particular element, so you can use the same class on as many elements as you want.
+    - You can also add multiple classes to the same element in a space-separated list: class="alert-text severe-alert". */
+
+.alert-text {
+    color: red;
+}
+
+/* Id selectors
+    - Matches an element based on the value of the element's id attribute.
+    - The syntax is a octothorpe immediately followed by the case-sensitive value of the id attribute: #my-id
+    - Id is a global attribute that can be placed on any HTML element.
+    - The value of an Id must be unique to the whole document; a single element can have a given id.
+    - An element's id should not contain any whitespaces. */
+#title {
+    background-color: aqua;
+}
+
+/* Selector list
+    - If we have groups of elements that share some declarations between them, we can group them together by grouping their selectors
+    in a selector list.
+    - A selector list is a comma-separated list of selectors, e.g.: .read, .unread, h1.
+    - The selector list will match any element that matches one of the selectors in the selector list.*/
+.read,
+.unread {
+    color: white;
+    background-color: black;
+}
+
+.read {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.unread {
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Compound selector
+    - A compound selector is a sequence of simple selectors that are not separated by any combinator.
+    - A compound selector represents a set of simultaneous conditions on a single element.
+    - A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
+    - In a compound selector, the type selector must come first in the list of simple selectors. A single type selector is allowed.*/
+.subsection.header {
+    color: chartreuse;
+}
+
+.subsection#preview {
+    color: maroon;
+}
+
+/* Selector Combinators 
+    - Combinators allow us to combine multiple selectors differently than either grouping or chaining them,
+    because they show a relationship between the selectors.*/
+
+/* Descendant combinator
+    -  represented as a space between two selectors, e.g.: ul.my-things li
+    - A descendant combinator will only cause elements that match the last selector to be selected if they also have an ancestor
+    (parent, grandparent, etc) that matches the previous selector.
+    - So something like ".ancestor .child" would select an element with the class child if it has an ancestor with the class ancestor.
+    Another way to think of it is that child will only be selected if it is nested inside ancestor, regardless of how deep that nesting is.*/
+.ancestor .contents {
+    background-color: aliceblue;
+}
+
+
+/* CSS Properties */
+/* Color and background-color
+    color
+        - Sets the foreground color of an element's text and text decorations.
+    background-color
+        - Sets the background color of an element.
+Both of these properties accept the following types of values:
+    - Named color values: red, blue, aquamarine etc.
+    - Hex color values (with or without transparency): #1100ff, #ff000080 etc.
+    - RGB/A() (Red Green Blue) values: rgb(34, 12, 64), rgba(34, 12, 64, 0.6)
+    - HSL/A() (Hue Saturation Lightness) values: hsl(30, 100%, 50%, 0.6), hsla(30, 100%, 50%, 0.6)
+    - global values: inherit, initial, revert, revert-layer, unset.*/
+
+/* Typography basics and text-align
+    font-family
+        - Specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
+    font-size
+        - Specifies the size of the font.
+    font-weight
+        - Specifies the weight (or boldness) of the font.
+        - The weights available depend on the font-family that is currently set.
+    font-style
+        - Specifies whether a font should be styled with a normal, italic, or oblique face from its font-family.
+    text-align
+        - Sets the horizontal alignment of the inline-level content inside a block element or table-cell box.
+*/
+
+/* Image height and width
+    - By default, an <img> element’s height and width values will be the same as the actual image file’s height and width.
+    -  If you wanted to adjust the size of the image without causing it to lose its proportions, you would use a value of "auto"
+    for the height property and adjust the width value, e.g.: img { height: auto; width: 500px; }.
+    - It's best practice to explicitly set an image's height and width even if you don't modify the image's dimensions.
+    When specifying the dimensions, space will be reserved on the page, so that if the image loads slowly, the rest of the
+    page's content doesn't suddenly shift when the image finally loads.
+*/
